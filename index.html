@@ -1,1 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefox Nightly - Будущее браузера уже здесь</title>
+    <style>
+        :root {
+            --primary: #ff9400;
+            --secondary: #003eaa;
+            --dark: #20123a;
+            --light: #f9f9fa;
+            --gray: #ededf0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, #fff 0%, var(--gray) 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Features */
+        .features {
+            padding: 4rem 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        /* Installation */
+        .installation {
+            background: var(--gray);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .os-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Code blocks */
+        .code-block {
+            background: var(--dark);
+            color: var(--light);
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            text-align: left;
+            overflow-x: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🦊</div>
+            <h1>Firefox Nightly</h1>
+            <p>Познакомьтесь с будущим Firefox сегодня</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Самый современный браузер для разработчиков</h1>
+            <p>Тестируйте новые функции раньше всех и помогите сделать Firefox лучше</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Почему Firefox Nightly?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Ежедневные обновления</h3>
+                    <p>Получайте самые свежие функции и исправления каждый день</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Экспериментальные API</h3>
+                    <p>Доступ к самым современным веб-технологиям до их официального релиза</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🐛</div>
+                    <h3>Помощь в развитии</h3>
+                    <p>Ваши отчеты об ошибках помогают улучшить Firefox для всех пользователей</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="installation">
+        <div class="container">
+            <h2>Установка Firefox Nightly</h2>
+            
+            <div class="os-buttons">
+                <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly" class="btn">Windows</a>
+                <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly" class="btn">macOS</a>
+                <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly" class="btn">Linux</a>
+            </div>
+
+            <h3>Установка через командную строку</h3>
+            
+            <div class="code-block">
+                <pre><code># Windows (winget)
+winget install Mozilla.FirefoxNightly
+
+# macOS (Homebrew)
+brew install --cask firefox-nightly
+
+# Linux (apt)
+sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
+sudo apt update
+sudo apt install firefox-trunk</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Для разработчиков</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Новые технологии</h3>
+                    <div class="code-block">
+                        <pre><code>// WebGPU
+const adapter = await navigator.gpu.requestAdapter();
+
+// WASM GC
+new WebAssembly.GarbageCollector();</code></pre>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Инструменты</h3>
+                    <ul style="text-align: left; margin: 1rem;">
+                        <li>Расширенные DevTools</li>
+                        <li>Профилировщик производительности</li>
+                        <li>Инструменты для работы с памятью</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Firefox Nightly - браузер для тех, кто создает будущее веба</p>
+            <p>
+                <a href="https://www.mozilla.org" style="color: var(--primary);">Официальный сайт</a> | 
+                <a href="https://bugzilla.mozilla.org" style="color: var(--primary);">Сообщить об ошибке</a>
+            </p>
+            <p>Лицензия MPL 2.0</p>
+        </div>
+    </footer>
+</body>
+</html>
 
